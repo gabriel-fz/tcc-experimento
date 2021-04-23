@@ -1,16 +1,16 @@
 import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
-  * {
+    * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-variant-numeric: lining-nums;
     }
 
-    body {
-      background: #F1F0F5;
-      color: #33303E;
+    body, #root {
+      background: #141C3C;
+      color: #fff;
       -webkit-font-smoothing: antialiased;
     }
 

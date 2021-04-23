@@ -1,7 +1,8 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch } from 'react-router-dom';
 
-// import Home from '../pages/Home';
+import Route from './Route';
+
 import Main from '../pages/Main';
 import Error404 from '../pages/Error404';
 

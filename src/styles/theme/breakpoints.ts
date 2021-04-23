@@ -1,3 +1,3 @@
 export const breakpoints = {
-  large: '1000px',
+  large: '1200px',
 };
