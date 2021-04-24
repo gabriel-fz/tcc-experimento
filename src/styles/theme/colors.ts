@@ -7,5 +7,8 @@ export const colors = {
   danger: '#FF535A',
   play: '#D32EFF',
   normal: '#2B8CFA',
+  successGradient: 'linear-gradient(to top right, #01AE67, #2AF786)',
+  dangerGradient: 'linear-gradient(to top right, #FF3268, #FE754A)',
   playGradient: 'linear-gradient(to top right, #812DFF, #D32EFF)',
+  normalGradient: 'linear-gradient(to top right, #1255F6 #43BFFE)',
 };
