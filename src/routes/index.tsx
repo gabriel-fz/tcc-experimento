@@ -4,11 +4,13 @@ import { Switch } from 'react-router-dom';
 import Route from './Route';
 
 import Main from '../pages/Main';
+import Instructions from '../pages/Instructions';
 import Error404 from '../pages/Error404';
 
 const Routes: React.FC = () => (
   <Switch>
     <Route path="/" exact component={Main} />
+    <Route path="/instrucoes" exact component={Instructions} />
     <Route path="*" component={Error404} />
   </Switch>
 );

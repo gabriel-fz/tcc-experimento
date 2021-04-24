@@ -1,6 +1,7 @@
+import { ButtonHTMLAttributes } from 'react';
 import styled, { css } from 'styled-components';
 
-export interface ButtonProps {
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   color: 'play';
 }
 
