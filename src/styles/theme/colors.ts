@@ -1,9 +1,11 @@
 export const colors = {
-  primaryOne: '#141C3C',
-  primaryTwo: '#212D5B',
-  primaryThree: '#243B97',
+  primary1: '#141C3C',
+  primary2: '#212D5B',
+  primary3: '#243B97',
+  primary4: '#7B8BCB',
   success: '#1AD67B',
   danger: '#FF535A',
   play: '#D32EFF',
   normal: '#2B8CFA',
+  playGradient: 'linear-gradient(to top right, #812DFF, #D32EFF)',
 };
