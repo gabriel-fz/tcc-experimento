@@ -29,6 +29,22 @@ export const Container = styled.div`
     width: 100%;
     max-width: 45%;
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+    justify-content: center;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      max-width: 600px;
+    }
+
+    img {
+      display: none;
+    }
+  }
 `;
 
 export const Button = styled(ButtonDefault)`

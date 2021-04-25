@@ -43,6 +43,11 @@ export const Content = styled.div<ContentProps>`
     height: 80px;
     width: 100%;
     padding: 30px;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
+      justify-content: center;
+      padding: 15px;
+    }
   }
 
   > div {
@@ -52,6 +57,12 @@ export const Content = styled.div<ContentProps>`
 
     height: 100%;
     margin: 30px 0 100px;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
+      margin: auto 0;
+      max-height: 300px;
+      padding: 10px 0 20px;
+    }
   }
 `;
 

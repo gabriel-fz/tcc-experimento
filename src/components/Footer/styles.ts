@@ -20,4 +20,15 @@ export const Container = styled.footer`
       text-align: center;
     }
   }
+
+  @media (max-width: ${({ theme }) =>
+      theme.breakpoints.small}) and (max-height: 680px) {
+    height: 60px;
+
+    div {
+      p {
+        font-size: 12px;
+      }
+    }
+  }
 `;

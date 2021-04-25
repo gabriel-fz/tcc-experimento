@@ -16,4 +16,17 @@ export const Container = styled.header`
     margin: 0 auto;
     padding: 0 20px;
   }
+
+  @media (max-width: ${({ theme }) =>
+      theme.breakpoints.small}) and (max-height: 680px) {
+    height: 60px;
+
+    div {
+      a {
+        img {
+          height: 30px;
+        }
+      }
+    }
+  }
 `;

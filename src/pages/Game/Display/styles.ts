@@ -45,4 +45,17 @@ export const Digit = styled.div<DigitProps>`
     font-weight: bold;
     font-size: 48px;
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
+    height: 55px;
+    width: 55px;
+
+    strong {
+      font-size: 36px;
+    }
+
+    & + div {
+      margin-left: 15px;
+    }
+  }
 `;

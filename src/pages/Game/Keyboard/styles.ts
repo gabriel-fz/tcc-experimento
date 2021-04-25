@@ -40,4 +40,14 @@ export const Button = styled.button<ButtonProps>`
   & + button {
     margin-left: 25px;
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
+    height: 55px;
+    width: 55px;
+    font-size: 36px;
+
+    & + button {
+      margin-left: 15px;
+    }
+  }
 `;
