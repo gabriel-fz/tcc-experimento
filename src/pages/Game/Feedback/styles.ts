@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
-export interface FeedbackProps {
-  action?: 'success' | 'error';
+interface FeedbackProps {
+  isCorrect: boolean;
+  isErrored: boolean;
 }
 
 export const Container = styled.div<FeedbackProps>`
@@ -14,14 +15,12 @@ export const Container = styled.div<FeedbackProps>`
     margin: 0 20px;
 
     &:first-child {
-      color: ${({ action, theme }) =>
-        action && action === 'success' && theme.colors.success};
+      color: ${({ isCorrect, theme }) => isCorrect && theme.colors.success};
     }
 
     &:last-child {
       transform: rotate(180deg);
-      color: ${({ action, theme }) =>
-        action && action === 'error' && theme.colors.danger};
+      color: ${({ isErrored, theme }) => isErrored && theme.colors.danger};
     }
   }
 `;

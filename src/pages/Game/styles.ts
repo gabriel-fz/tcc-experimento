@@ -1,13 +1,18 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import ButtonDefault from '../../components/Button';
+
+interface ContentProps {
+  isCorrect: boolean;
+  isErrored: boolean;
+}
 
 export const Container = styled.div`
   display: flex;
   align-items: center;
 `;
 
-export const Content = styled.div`
+export const Content = styled.div<ContentProps>`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,8 +20,20 @@ export const Content = styled.div`
   height: 80%;
   width: 100%;
   background: ${({ theme }) => theme.colors.primary2};
-  border: 2px solid ${({ theme }) => theme.colors.success};
+  border: 2px solid ${({ theme }) => theme.colors.normal};
   border-radius: 10px;
+
+  ${({ isErrored }) =>
+    isErrored &&
+    css`
+      border: 2px solid ${({ theme }) => theme.colors.danger};
+    `}
+
+  ${({ isCorrect }) =>
+    isCorrect &&
+    css`
+      border: 2px solid ${({ theme }) => theme.colors.success};
+    `}
 
   header {
     display: flex;
@@ -38,7 +55,4 @@ export const Content = styled.div`
   }
 `;
 
-export const Button = styled(ButtonDefault)`
-  margin-top: 30px;
-  max-width: 300px;
-`;
+export const Button = styled(ButtonDefault)``;
