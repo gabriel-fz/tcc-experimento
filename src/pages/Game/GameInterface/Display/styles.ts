@@ -46,7 +46,7 @@ export const Digit = styled.div<DigitProps>`
     font-size: 48px;
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.smallWidth}) {
     height: 55px;
     width: 55px;
 

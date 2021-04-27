@@ -30,7 +30,7 @@ export const Container = styled.div`
     max-width: 45%;
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mediumWidth}) {
     justify-content: center;
 
     div {
@@ -39,6 +39,10 @@ export const Container = styled.div`
       align-items: center;
 
       max-width: 600px;
+
+      p {
+        text-align: center;
+      }
     }
 
     img {

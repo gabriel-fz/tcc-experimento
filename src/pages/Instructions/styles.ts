@@ -32,6 +32,22 @@ export const Container = styled.div`
       margin-top: 25px;
       list-style-position: inside;
     }
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mediumWidth}) {
+      padding: 0 40px;
+    }
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.smallWidth}) {
+      padding: 0 10px;
+
+      h1 {
+        font-size: 32px;
+      }
+
+      ul {
+        font-size: 18px;
+      }
+    }
   }
 `;
 

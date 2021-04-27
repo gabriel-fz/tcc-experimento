@@ -14,7 +14,7 @@ export const Container = styled.footer`
     height: 100%;
     margin: 0 auto;
     padding: 0 20px;
-    max-width: ${({ theme }) => theme.breakpoints.large};
+    max-width: ${({ theme }) => theme.breakpoints.largeWidth};
 
     p {
       text-align: center;
@@ -22,7 +22,8 @@ export const Container = styled.footer`
   }
 
   @media (max-width: ${({ theme }) =>
-      theme.breakpoints.small}) and (max-height: 680px) {
+      theme.breakpoints.smallWidth}) and (max-height: ${({ theme }) =>
+      theme.breakpoints.smallHeight}) {
     height: 60px;
 
     div {

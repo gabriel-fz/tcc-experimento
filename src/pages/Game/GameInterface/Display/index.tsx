@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { uuid } from 'uuidv4';
 
-import { useGame } from '../../../hooks/game';
+import { useGame } from '../../../../hooks/game';
 
 import { Container, Digit } from './styles';
 

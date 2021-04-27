@@ -41,7 +41,7 @@ export const Button = styled.button<ButtonProps>`
     margin-left: 25px;
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.smallWidth}) {
     height: 55px;
     width: 55px;
     font-size: 36px;

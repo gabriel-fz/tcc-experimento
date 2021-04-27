@@ -2,15 +2,19 @@ import React, { useEffect, useState } from 'react';
 
 import { useGame } from '../../hooks/game';
 
-import Wins from './Wins';
-import Display from './Display';
-import Feedback from './Feedback';
-import Keyboard from './Keyboard';
+import GameInterface from './GameInterface';
+import Restart from './Restart';
 
 import { Container, Content, Button } from './styles';
 
 const Game: React.FC = () => {
-  const { endOfTheGame, restartGame, displaySequence, result } = useGame();
+  const {
+    endOfTheGame,
+    restartGame,
+    displaySequence,
+    result,
+    wins,
+  } = useGame();
 
   const [gameDisplay, setGameDisplay] = useState(true);
 
@@ -30,31 +34,36 @@ const Game: React.FC = () => {
         isCorrect={displaySequence.length === result.length}
         isErrored={endOfTheGame && displaySequence.length !== result.length}
       >
-        <header>
-          <Wins>1</Wins>
-        </header>
-        <div>
-          <div>
-            <Display />
-          </div>
+        {gameDisplay && <GameInterface />}
 
-          {gameDisplay && <Feedback />}
+        {!gameDisplay && wins === 2 && (
+          <>
+            <Restart
+              levelUp={displaySequence.length === result.length}
+              restart={restartGame}
+            />
 
-          <div>
-            <Keyboard />
-          </div>
+            <Button color="play" onClick={() => restartGame()}>
+              Reiniciar
+            </Button>
+          </>
+        )}
 
-          <div>
-            {!gameDisplay && (
-              <Button color="play" onClick={() => restartGame()}>
-                Reiniciar
-              </Button>
-            )}
-          </div>
-        </div>
+        {!gameDisplay && wins !== 2 && (
+          <>
+            <Restart
+              levelUp={displaySequence.length === result.length}
+              restart={restartGame}
+            />
+          </>
+        )}
       </Content>
     </Container>
   );
 };
 
 export default Game;
+
+// <Button color="play" onClick={() => restartGame()}>
+//                 Reiniciar
+//               </Button>

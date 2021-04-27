@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { useGame } from '../../../hooks/game';
+import { useGame } from '../../../../hooks/game';
 
 import { Container } from './styles';
 

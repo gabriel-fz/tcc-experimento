@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { AiOutlineLike } from 'react-icons/ai';
 
-import { useGame } from '../../../hooks/game';
+import { useGame } from '../../../../hooks/game';
 
 import { Container } from './styles';
 
@@ -18,16 +18,10 @@ const Feedback: React.FC = () => {
         result[displaySequence.length - 1]
       ) {
         setIsCorrect(true);
-
-        setTimeout(() => {
-          setIsCorrect(false);
-        }, 1000);
+        setIsErrored(false);
       } else {
         setIsErrored(true);
-
-        setTimeout(() => {
-          setIsErrored(false);
-        }, 1000);
+        setIsCorrect(false);
       }
     }
   }, [displaySequence, result]);

@@ -1,7 +1,7 @@
 import React from 'react';
 import { uuid } from 'uuidv4';
 
-import { useGame } from '../../../hooks/game';
+import { useGame } from '../../../../hooks/game';
 
 import { Container, Button } from './styles';
 
