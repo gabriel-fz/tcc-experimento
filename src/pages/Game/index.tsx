@@ -4,8 +4,9 @@ import { useGame } from '../../hooks/game';
 
 import GameInterface from './GameInterface';
 import Restart from './Restart';
+import Finish from './Finish';
 
-import { Container, Content, Button } from './styles';
+import { Container, Content } from './styles';
 
 const Game: React.FC = () => {
   const {
@@ -36,26 +37,13 @@ const Game: React.FC = () => {
       >
         {gameDisplay && <GameInterface />}
 
-        {!gameDisplay && wins === 2 && (
-          <>
-            <Restart
-              levelUp={displaySequence.length === result.length}
-              restart={restartGame}
-            />
-
-            <Button color="play" onClick={() => restartGame()}>
-              Reiniciar
-            </Button>
-          </>
-        )}
+        {!gameDisplay && wins === 2 && <Finish />}
 
         {!gameDisplay && wins !== 2 && (
-          <>
-            <Restart
-              levelUp={displaySequence.length === result.length}
-              restart={restartGame}
-            />
-          </>
+          <Restart
+            levelUp={displaySequence.length === result.length}
+            restart={restartGame}
+          />
         )}
       </Content>
     </Container>

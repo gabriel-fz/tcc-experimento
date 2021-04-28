@@ -21,9 +21,13 @@ export const Container = styled.div`
     margin-top: 30px;
     color: ${({ theme }) => theme.colors.primary4};
     text-align: center;
+
+    b {
+      color: #fff;
+    }
   }
 
-  button {
+  a {
     max-width: 400px;
     margin-top: 50px;
   }
@@ -37,6 +41,16 @@ export const Container = styled.div`
 
     p {
       font-size: 18px;
+
+      @media (max-height: ${({ theme }) => theme.breakpoints.smallHeight}) {
+        margin-top: 15px;
+      }
+    }
+
+    a {
+      @media (max-height: ${({ theme }) => theme.breakpoints.smallHeight}) {
+        margin-top: 15px;
+      }
     }
   }
 `;

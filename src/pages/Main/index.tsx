@@ -1,13 +1,10 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
 
 import imgCover from '../../assets/img-main.svg';
 
-import { Container, Button } from './styles';
+import { Container, ButtonLink } from './styles';
 
 const Main: React.FC = () => {
-  const history = useHistory();
-
   return (
     <Container>
       <div>
@@ -18,9 +15,9 @@ const Main: React.FC = () => {
           ser mais complexo do que parece!
         </p>
 
-        <Button color="play" onClick={() => history.push('/instrucoes')}>
+        <ButtonLink color="play" to="/instrucoes">
           Começar
-        </Button>
+        </ButtonLink>
       </div>
 
       <img src={imgCover} alt="imagem de capa" />

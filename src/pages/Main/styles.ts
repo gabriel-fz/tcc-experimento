@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import ButtonDefault from '../../components/Button';
+import ButtonLinkDefault from '../../components/ButtonLink';
 
 export const Container = styled.div`
   display: flex;
@@ -40,6 +40,10 @@ export const Container = styled.div`
 
       max-width: 600px;
 
+      h1 {
+        text-align: center;
+      }
+
       p {
         text-align: center;
       }
@@ -51,7 +55,7 @@ export const Container = styled.div`
   }
 `;
 
-export const Button = styled(ButtonDefault)`
+export const ButtonLink = styled(ButtonLinkDefault)`
   margin-top: 20px;
   max-width: 300px;
 `;

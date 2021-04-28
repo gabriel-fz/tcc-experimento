@@ -1,11 +1,8 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
 
-import { Container, Button } from './styles';
+import { Container, ButtonLink } from './styles';
 
 const Instructions: React.FC = () => {
-  const history = useHistory();
-
   return (
     <Container>
       <div>
@@ -22,9 +19,9 @@ const Instructions: React.FC = () => {
           <li>Vença duas vezes para concluir o teste.</li>
         </ul>
 
-        <Button color="play" onClick={() => history.push('/jogo')}>
+        <ButtonLink color="play" to="/jogo">
           Jogar
-        </Button>
+        </ButtonLink>
       </div>
     </Container>
   );

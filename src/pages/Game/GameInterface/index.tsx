@@ -5,9 +5,11 @@ import Display from './Display';
 import Feedback from './Feedback';
 import Keyboard from './Keyboard';
 
+import { Container } from './styles';
+
 const GameInterface: React.FC = () => {
   return (
-    <>
+    <Container>
       <header>
         <Wins>1</Wins>
       </header>
@@ -22,7 +24,7 @@ const GameInterface: React.FC = () => {
           <Keyboard />
         </div>
       </div>
-    </>
+    </Container>
   );
 };
 

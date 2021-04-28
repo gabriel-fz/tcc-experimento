@@ -15,10 +15,17 @@ const Restart: React.FC<RestartProps> = ({ levelUp, restart }) => {
       {levelUp ? (
         <>
           <h1>Parabéns!</h1>
+
+          <p>
+            Você conseguiu alcançar sua primeira vitória! Clique em reiniciar e
+            vença mais uma vez para poder concluir o teste!
+          </p>
         </>
       ) : (
         <>
           <h1>Você perdeu :/</h1>
+
+          <p>Mas não desanime! Clique em reiniciar e tente de novo!</p>
         </>
       )}
 

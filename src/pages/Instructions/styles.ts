@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import ButtonDefault from '../../components/Button';
+import ButtonLinkDefault from '../../components/ButtonLink';
 
 export const Container = styled.div`
   display: flex;
@@ -51,7 +51,7 @@ export const Container = styled.div`
   }
 `;
 
-export const Button = styled(ButtonDefault)`
+export const ButtonLink = styled(ButtonLinkDefault)`
   margin-top: 30px;
   max-width: 300px;
 `;
