@@ -4,6 +4,7 @@ import React, {
   useState,
   useCallback,
   useEffect,
+  useMemo,
 } from 'react';
 
 import getRandomSequence from '../utils/getRandomSequence';
@@ -20,6 +21,7 @@ interface GameContextData {
   keyboardSequence: KeyboardSequenceProps[];
   result: number[];
   endOfTheGame: boolean;
+  displaySequenceIsComplete: boolean;
   inputNumber(digit: number): void;
   restartGame(): void;
 }
@@ -46,6 +48,11 @@ export const GameProvider: React.FC = ({ children }) => {
   useEffect(() => {
     setResult(getRandomSequence.sort());
   }, []);
+
+  const displaySequenceIsComplete = useMemo(
+    () => displaySequence.length === result.length,
+    [displaySequence, result],
+  );
 
   const validateDigt = useCallback(
     (digit: number, index: number) => {
@@ -110,6 +117,7 @@ export const GameProvider: React.FC = ({ children }) => {
         result,
         inputNumber,
         endOfTheGame,
+        displaySequenceIsComplete,
         restartGame,
       }}
     >

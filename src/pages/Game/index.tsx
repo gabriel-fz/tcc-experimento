@@ -12,38 +12,34 @@ const Game: React.FC = () => {
   const {
     endOfTheGame,
     restartGame,
-    displaySequence,
-    result,
+    displaySequenceIsComplete,
     wins,
   } = useGame();
 
-  const [gameDisplay, setGameDisplay] = useState(true);
+  const [showGameDisplay, setShowGameDisplay] = useState(true);
 
   useEffect(() => {
     if (endOfTheGame) {
       setTimeout(() => {
-        setGameDisplay(false);
+        setShowGameDisplay(false);
       }, 1000);
     } else {
-      setGameDisplay(true);
+      setShowGameDisplay(true);
     }
   }, [endOfTheGame]);
 
   return (
     <Container>
       <Content
-        isCorrect={displaySequence.length === result.length}
-        isErrored={endOfTheGame && displaySequence.length !== result.length}
+        isCorrect={displaySequenceIsComplete}
+        isErrored={endOfTheGame && !displaySequenceIsComplete}
       >
-        {gameDisplay && <GameInterface />}
+        {showGameDisplay && <GameInterface />}
 
-        {!gameDisplay && wins === 2 && <Finish />}
+        {!showGameDisplay && wins === 2 && <Finish />}
 
-        {!gameDisplay && wins !== 2 && (
-          <Restart
-            levelUp={displaySequence.length === result.length}
-            restart={restartGame}
-          />
+        {!showGameDisplay && wins !== 2 && (
+          <Restart levelUp={displaySequenceIsComplete} restart={restartGame} />
         )}
       </Content>
     </Container>
@@ -51,7 +47,3 @@ const Game: React.FC = () => {
 };
 
 export default Game;
-
-// <Button color="play" onClick={() => restartGame()}>
-//                 Reiniciar
-//               </Button>

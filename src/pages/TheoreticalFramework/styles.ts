@@ -31,7 +31,7 @@ export const Content = styled.div`
     margin-bottom: 40px;
 
     h2 {
-      margin-bottom: 20px;
+      margin-bottom: 10px;
       font-size: 24px;
       font-weight: bold;
       color: ${({ theme }) => theme.colors.primary1};
@@ -41,6 +41,7 @@ export const Content = styled.div`
       font-size: 18px;
       text-align: justify;
       color: ${({ theme }) => theme.colors.primary2};
+      margin-top: 10px;
     }
 
     ul {
