@@ -46,9 +46,14 @@ export const Content = styled.div`
 
     ul {
       font-size: 18px;
+      text-align: justify;
       list-style-position: inside;
       color: ${({ theme }) => theme.colors.primary2};
       margin: 20px 0;
     }
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.smallWidth}) {
+    padding: 30px 20px 0;
   }
 `;
