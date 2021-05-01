@@ -7,11 +7,11 @@ const TheoreticalFramework: React.FC = () => {
     <Container>
       <Content>
         <div>
-          <h2>Parabéns por concluir o jogo?</h2>
+          <h2>Parabéns por concluir o jogo!</h2>
 
           <p>
             Se você conseguiu concluir o jogo, certamente foi porque você
-            aprendeu as seguintes regras:
+            aprendeu por conta própria as seguintes regras:
           </p>
 
           <ul>
@@ -29,7 +29,7 @@ const TheoreticalFramework: React.FC = () => {
             </li>
             <li>
               Se o número não estiver correto na ordenação do display, o botão e
-              o n[úmero indicado no display ficam vermelhos.
+              o número indicado no display ficam vermelhos.
             </li>
             <li>Ao inserir um número errado você perde o jogo.</li>
             <li>
@@ -124,7 +124,7 @@ const TheoreticalFramework: React.FC = () => {
           <p>
             É a consequência que diminui a probabilidade de um comportamento
             ocorrer novamente através da adição de um estímulo aversivo.
-            Exemplo: Quando uma pessoa alérgica a chocolate como chocolate, ela
+            Exemplo: Quando uma pessoa alérgica a chocolate come chocolate, ela
             será condicionada a evitar comer chocolate para não ter crises de
             alergia.
           </p>
