@@ -147,9 +147,10 @@ const TheoreticalFramework: React.FC = () => {
           <h2>Como o condicionamento estava presente no jogo então?</h2>
 
           <p>
-            Ao jogar, você teve vários contatos com estímulos positivos e
-            negativos que fizeram com que você aprendesse sobre o jogo e
-            posteriormente ganhasse. Esses estímulos estavam presentes da
+            Esse experimento tenta replicar a caixa de Skinner de maneira
+            parecida. Logo, ao jogar você teve vários contatos com estímulos
+            positivos e negativos que fizeram com que você aprendesse sobre o
+            jogo e posteriormente ganhasse. Esses estímulos estavam presentes da
             seguinte maneira:
           </p>
 
