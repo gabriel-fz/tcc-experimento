@@ -11,6 +11,12 @@ export const Container = styled.div`
   max-width: 700px;
   margin: 0 auto;
 
+  img {
+    height: 100%;
+    max-height: 140px;
+    margin-bottom: 20px;
+  }
+
   h1 {
     font-weight: bold;
     font-size: 64px;
@@ -34,6 +40,14 @@ export const Container = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.smallWidth}) {
     padding: 0 10px;
+
+    img {
+      max-height: 100px;
+
+      @media (max-height: ${({ theme }) => theme.breakpoints.smallHeight}) {
+        max-height: 70px;
+      }
+    }
 
     h1 {
       font-size: 32px;

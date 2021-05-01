@@ -1,5 +1,7 @@
 import React from 'react';
 
+import imgTrophy from '../../../assets/trofeu.svg';
+
 import ButtonLink from '../../../components/ButtonLink';
 
 import { Container } from './styles';
@@ -7,6 +9,8 @@ import { Container } from './styles';
 const Finish: React.FC = () => {
   return (
     <Container>
+      <img src={imgTrophy} alt="Imagem de trofeu" />
+
       <h1>Parabéns!</h1>
 
       <p>

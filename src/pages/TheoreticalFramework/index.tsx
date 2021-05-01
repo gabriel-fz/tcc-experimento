@@ -7,7 +7,7 @@ const TheoreticalFramework: React.FC = () => {
     <Container>
       <Content>
         <div>
-          <h2>Como você conseguiu chegar aqui??</h2>
+          <h2>Parabéns por concluir o jogo?</h2>
 
           <p>
             Se você conseguiu concluir o jogo, certamente foi porque você

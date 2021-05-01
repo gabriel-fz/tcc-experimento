@@ -1,5 +1,8 @@
 import React from 'react';
 
+import imgRestart from '../../../assets/restart.svg';
+import imgMedal from '../../../assets/medalha.svg';
+
 import Button from '../../../components/Button';
 
 import { Container } from './styles';
@@ -14,6 +17,8 @@ const Restart: React.FC<RestartProps> = ({ levelUp, restart }) => {
     <Container>
       {levelUp ? (
         <>
+          <img src={imgMedal} alt="Imagem de medalha" />
+
           <h1>Parabéns!</h1>
 
           <p>
@@ -23,6 +28,8 @@ const Restart: React.FC<RestartProps> = ({ levelUp, restart }) => {
         </>
       ) : (
         <>
+          <img src={imgRestart} alt="Imagem de reinicio de jogo" />
+
           <h1>Você perdeu :/</h1>
 
           <p>Mas não desanime! Clique em reiniciar e tente de novo!</p>
